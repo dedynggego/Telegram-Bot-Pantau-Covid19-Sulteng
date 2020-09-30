@@ -10,7 +10,11 @@ bot = telebot.TeleBot(api)
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-    bot.reply_to(message, 'Welcome guys..')
+    pembuka = 'Selamat datang di bot pantau covid-19 Sulawesi Tengah. Berikut perintah untuk mengoperasikan bot ini'
+    keyword = '/start - untuk memulai.\n /indo - untuk melihat jumlah kasus covid19 di Indonesia.\n /sulteng - untuk melihat jumlah kasus covid19 di Sulawesi.\n /rs - untuk melihat data rumah sakit rujukan covid19 di Sulawesi Tengah.'
+    pesan = 'Tetap jaga kesehatan ya, #PakaiMasker, #CuciTangan, #JagaJarak, dan tetap patuhi protokol kesehatan.\n\n\n\n Salam dari saya dedynggego@gmail.com'
+    data = '{}\n\n {}\n\n {}'.format(pembuka, keyword,pesan)
+    bot.reply_to(message, data)
 
 @bot.message_handler(commands=['indo'])
 def data_indo(message):
