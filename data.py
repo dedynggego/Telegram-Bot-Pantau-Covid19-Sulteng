@@ -19,20 +19,6 @@ def rumahsakit():
     # harian_positif = harian_list[0]
     return rs
 
-def detail():
-    api_url = 'https://data.covid19.go.id/public/api/prov.json'
-    result = requests.get(api_url).json()
-    prov = result['list_data']
-    detail_res = prov[32]
-    ambil_detal = [detail_res]
-    ambil_detal = ambil_detal[0]
-    ambil_detal = ambil_detal['kelompok_umur']
-    ambil_detal = ambil_detal
-    return ambil_detal
-
-# det = rumahsakit()
-# for i in det:
-#     print(i[110])
 
 
 
