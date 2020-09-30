@@ -5,7 +5,7 @@ import rumah_sakit
 indo = data.indo1()
 sulteng = data.prov()
 
-api = '1310183418:AAEyGWIoq_G5HVCo5OyMhae3juw3pnAzOVQ'
+api = <'token'>
 bot = telebot.TeleBot(api)
 
 @bot.message_handler(commands=['start'])
